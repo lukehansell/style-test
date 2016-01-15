@@ -49,4 +49,18 @@ export default class App extends Component {
 	toggleDrawer() {
 		this.setState({displayDrawer: !this.state.displayDrawer});
 	}
+
+	getChildContext() {
+		return {
+			style: {
+				header: {
+					
+				}
+			}
+		}
+	}
+}
+
+App.childContextTypes = {
+	style: React.PropTypes.object
 }

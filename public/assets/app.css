@@ -21,19 +21,6 @@ html, body {
 	flex-direction:column;
 }
 
-.header {
-	background: #2e4272;
-	padding: 0 1em;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
-.header .brand {
-	color: #eeeeee;
-	flex: 1;
-}
-
 .right {
 	text-align: right;
 }
