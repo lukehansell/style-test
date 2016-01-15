@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import BlogItem from './blogItem';
 
 export default class BlogRoll extends Component {
 
@@ -24,17 +25,7 @@ export default class BlogRoll extends Component {
 				{this.state.posts.map( (post, i) => {
 					return (
 						<li className="blogRoll-item" key={`post-${i}`}>
-							<article>
-								<h2>{post.title}</h2>
-								<p>{post.content}</p>
-								<ul className="tag-list">
-									{post.tags.map( tag => {
-										return (
-											<li className="tag-item" key={`tag-${tag}`}>{tag}</li>
-										)
-									})}
-								</ul>
-							</article>
+							<BlogItem {...post} />
 						</li>
 					)
 				})}
