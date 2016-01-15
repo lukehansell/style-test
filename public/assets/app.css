@@ -154,15 +154,3 @@ html, body {
 		box-shadow: 0px 5px 15px #333333;
 	}
 }
-
-.hamburger {
-	border: none;
-	background: none;
-	color: #ffffff;
-	transform: rotate(90deg);
-	font-size:1.25em;
-}
-
-.hamburger:after {
-	content: '|||'
-}

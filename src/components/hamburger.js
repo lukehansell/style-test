@@ -1,3 +1,10 @@
 import React from 'react'
-import style from './hamburger.style.js'
-export default ({className, onClick}) => <button className={`hamburger ${className}`} onClick={onClick}/>
+import merge from 'merge'
+import flair from '../lib/flair'
+import defaultStyle from './hamburger.style.js'
+export default (props, context) => {
+	let style = merge.recursive({}, defaultStyle, context.style, props.style)
+	return (
+		<button className={`hamburger ${props.className}`} onClick={props.onClick} style={flair(style)}>|||</button>
+	)
+}
