@@ -1,0 +1,181 @@
+.color-primary-0 { color: #2E4272 }	/* Main Primary color */
+.color-primary-1 { color: #7887AB }
+.color-primary-2 { color: #4F628E }
+.color-primary-3 { color: #162955 }
+.color-primary-4 { color: #061539 }
+
+* {
+	box-sizing: border-box;
+	font-family: helvetica, arial, sans-serif;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.app {
+	display: flex;
+	flex-direction:column;
+}
+
+.header {
+	background: #2e4272;
+	padding: 0 1em;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.header .brand {
+	color: #eeeeee;
+	flex: 1;
+}
+
+.right {
+	text-align: right;
+}
+
+.nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.nav .nav-link a {
+	margin: 0 0.5em;
+}
+
+.nav .nav-link a {
+	text-decoration:none;
+	cursor:pointer;
+}
+
+.header .nav {
+	flex: 5;
+	display: flex;
+}
+
+.header .nav.right {
+	justify-content: flex-end;
+}
+
+.header .nav .nav-link {
+	padding: 0 1em;
+}
+
+.header .nav .nav-link a {
+	color: #eeeeee;
+}
+
+.header .nav .nav-link a:hover {
+	color: #7887AB;
+}
+
+.drawer .nav {
+	list-style: none;
+	margin: 1em 0;
+	padding: 0;
+}
+
+.drawer .nav .nav-link:hover {
+	background: #eeeeee
+}
+
+.drawer .nav .nav-link a {
+	padding: 0 1em;
+}
+
+.drawer-background {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.6);
+}
+
+.drawer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: #ffffff;
+	box-shadow: 5px 0 15px #333333;
+	min-width: 100px;
+	max-width:80%;
+}
+
+.blogRoll {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.blogRoll .blogRoll-item {
+	padding: 1em;
+}
+
+.blogRoll .tag-list .tag-item {
+	padding-right: 0.5em;
+	color: #7887AB;
+	cursor: pointer;
+}
+
+.blogRoll .tag-list .tag-item:hover {
+	color: #000000;
+}
+
+.visible-xs {
+	display:none;
+	visibility: hidden;
+}
+
+@media screen and (min-width: 480px) {
+	.blogRoll {
+		margin: 1em 20%
+	}
+
+	.blogRoll .blogRoll-item {
+		border: 1px solid #7887AB;
+		border-radius: 1em;
+		margin-bottom: 1em; /* should be the same as margin top for .blogRoll */
+	}
+
+	.blogRoll .tag-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.hidden-xs {
+		display:none;
+		visibility:hidden;
+	}
+
+	.visible-xs {
+		display:initial;
+		visibility:visible;
+	}
+
+	.blogRoll .blogRoll-item {
+		box-shadow: 0px 5px 15px #333333;
+	}
+}
+
+.hamburger {
+	border: none;
+	background: none;
+	color: #ffffff;
+	transform: rotate(90deg);
+	font-size:1.25em;
+}
+
+.hamburger:after {
+	content: '|||'
+}
