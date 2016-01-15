@@ -8,8 +8,8 @@ export default (props, context) => {
 	let style = merge.recursive({}, defaultStyle, context.style, props.style)
 
 	return (
-		<li className="nav-link" style={flair(style)}>
-			<a href={props.link} style={flair(style.a)}>{props.text}</a>
+		<li className="nav-link" style={flair(style.navItem)}>
+			<a href={props.link} style={flair(style.navItem.a)}>{props.text}</a>
 		</li>
 	)
 }

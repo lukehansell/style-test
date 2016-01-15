@@ -1,6 +1,8 @@
 module.exports = {
-	a: {
-		textDecoration: 'none',
-		cursor: 'pointer'
+	navItem: {
+		a: {
+			textDecoration: 'none',
+			cursor: 'pointer'
+		}
 	}
 }

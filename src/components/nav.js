@@ -10,10 +10,10 @@ module.exports = (props, context) => {
 	let style = merge.recursive({}, defaultStyle, context.style, props.style)
 
 	return (
-		<ul className={classes} style={flair(style)}>
+		<ul className={classes} style={flair(style.nav)}>
 			{props.items.map( (nav, i) => {
 				return (
-					<NavItem key={i} {...nav} style={style.navItem} />
+					<NavItem key={i} {...nav} style={style.nav.navItem} />
 				)
 			})}
 		</ul>
