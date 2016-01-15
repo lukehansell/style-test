@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Header from './header'
 import BlogRoll from './blogRoll'
 import Drawer from './drawer'
+import Nav from './nav'
 
 export default class App extends Component {
 
@@ -24,29 +25,13 @@ export default class App extends Component {
 
 		return (
 			<div className="app">
-				<Header brand="Style App" hamburgerClasses="visible-xs" onHamburgerClick={() => this.toggleDrawer()}>
-					<ul className="nav hidden-xs right">
-						{navItems.map( nav => {
-							return (
-								<li className="nav-link" key={nav.text}>
-									<a href={nav.link}>{nav.text}</a>
-								</li>
-							)
-						})}
-					</ul>
+				<Header brand="Style App" hamburgerClasses="visible-xs" onHamburgerClick={() => this.toggleDrawer()} style={{header: {}}}>
+					<Nav items={navItems} className="hidden-xs right"/>
 				</Header>
 				<BlogRoll />
 				{this.state.displayDrawer && (
 					<Drawer onHide={() => this.onHideDrawer()}>
-						<ul className="nav">
-							{navItems.map( nav => {
-								return (
-									<li className="nav-link" key={nav.text}>
-										<a href={nav.link}>{nav.text}</a>
-									</li>
-								)
-							})}
-						</ul>
+						<Nav items={navItems} />
 					</Drawer>
 				)}
 			</div>
