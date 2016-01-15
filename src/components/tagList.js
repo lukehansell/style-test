@@ -6,7 +6,7 @@ export default ({tags = []}) => {
 		<ul className="tag-list">
 			{tags.map( tag => {
 				return (
-					<TagItem tag={tag} />
+					<TagItem key={`tag-${tag}`} tag={tag} />
 				)
 			})}
 		</ul>
